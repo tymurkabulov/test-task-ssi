@@ -25,7 +25,7 @@ const LoginComponent = () => {
     // Validation
     const handleUsername = () => {
         if (
-            !usernameInput ||
+            usernameInput === '' ||
             usernameInput.length < 5 ||
             usernameInput.length > 12
         ) {

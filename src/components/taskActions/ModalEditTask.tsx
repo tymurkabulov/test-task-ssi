@@ -2,12 +2,8 @@ import React, { FC, useState, useEffect } from 'react';
 import {Box, Button, Modal, Paper, TextField, Typography} from "@mui/material";
 import SaveIcon from "@mui/icons-material/Save";
 import CancelIcon from '@mui/icons-material/Cancel';
+import {ITask} from "../interfaces/ITask";
 
-interface ITask {
-    id: number;
-    taskTitle: string;
-    taskDescription: string;
-}
 
 interface EditTaskModalProps {
     isModalOpen: boolean;

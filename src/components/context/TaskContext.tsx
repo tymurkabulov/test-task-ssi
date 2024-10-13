@@ -1,10 +1,7 @@
-import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
+import React, {createContext, useContext, useState, useEffect, ReactNode, FC} from 'react';
+import {ITask} from "../interfaces/ITask";
 
-interface ITask {
-    id: number;
-    taskTitle: string;
-    taskDescription: string;
-}
+
 
 interface TaskContextType {
     tasks: ITask[];
@@ -27,7 +24,7 @@ interface TaskProviderProps {
     children: ReactNode;
 }
 
-export const TaskProvider: React.FC<TaskProviderProps> = ({ children }) => {
+export const TaskProvider: FC<TaskProviderProps> = ({ children }) => {
     const [tasks, setTasks] = useState<ITask[]>([]);
 
     useEffect(() => {
